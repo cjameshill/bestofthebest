@@ -1,0 +1,40 @@
+{
+  "bps": [
+    {
+      "title": "Blue Jackets with Nationwide",
+      "league": "NHL",
+      "sport": "Ice Hockey",
+      "link": "bluejackets-nationwide"
+    },
+    {
+      "title": "Cavaliers with Uber",
+      "league": "NBA",
+      "sport": "Basketball",
+      "link": "cavaliers-uber"
+    },
+    {
+      "title": "Dallas Cowboys with Ashley Furniture",
+      "league": "NFL",
+      "sport": "Football",
+      "link": "cowboys-ashleyfurniture"
+    },
+    {
+      "title": "Liverpool FC with Skype",
+      "league": "BPL",
+      "sport": "Soccer",
+      "link": "liverpool-skype"
+    },
+    {
+      "title": "Baltimore Ravens with Miller Lite",
+      "league": "NFL",
+      "sport": "Football",
+      "link": "ravens-millerlite"
+    },
+    {
+      "title": "Seattle Seahawks with Delta",
+      "league": "NFL",
+      "sport": "Football",
+      "link": "seahawks-delta"
+    }
+  ]
+}

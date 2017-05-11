@@ -1,7 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "Cleveland Browns Partnership Extranet",
+    "description": "Cleveland Browns Partnership Extranet - Version 2.0",
     "license": "MIT",
     "type": "project",
     "require": {

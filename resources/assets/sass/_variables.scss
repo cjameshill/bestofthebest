@@ -1,38 +1,178 @@
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// 1. Initial variables
 
-// Body
-$body-bg: #f5f8fa;
+// Colors
+$black:        hsl(0, 0%, 4%) !default
+$black-bis:    hsl(0, 0%, 7%) !default
+$black-ter:    hsl(0, 0%, 14%) !default
 
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+$navy-dark: hsl(225, 100%, 7%) !default
 
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger: #bf5329;
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+$orange:       hsl(14,  100%, 53%) !default
+$yellow:       hsl(48,  100%, 67%) !default
+$green:        hsl(141, 71%,  48%) !default
+$turquoise: hsl(190, 100%, 50%) !default
+$blue:         hsl(217, 71%,  53%) !default
+$purple:       hsl(271, 100%, 71%) !default
+$red:          hsl(348, 100%, 61%) !default
+$pink: hsl(333, 100%, 59%) !default
+
+$blue-light: hsl(187, 100%, 83%) !default
 
 // Typography
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
+$family-sans-serif: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$family-serif: 'Times', 'Georgia', serif;
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace !default
 
-// Navbar
-$navbar-default-bg: #fff;
+$size-1: 6em !default
+$size-2: 4.2em !default
+$size-3: 3em !default
+$size-4: 2.5em !default
+$size-5: 1.8em !default
+$size-6: 1em !default
 
-// Buttons
-$btn-default-color: $text-color;
+$size-7: 11px !default
 
-// Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+$weight-normal: 400 !default
+$weight-bold: 700 !default
+$weight-title-normal: 300 !default
+$weight-title-bold: 500 !default
 
-// Panels
-$panel-default-heading-bg: #fff;
+// Miscellaneous
+$easing: ease-out !default
+$radius-small: 10px !default
+$radius: 25px !default
+$radius-large: 20px !default
+$speed: 86ms !default
+
+$ease-cubic: cubic-bezier(0.005, 0.670, 0.440, 1.000);
+$ease-bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$ease-out: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$ease-in: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// 2. Primary colors
+
+$primary: $orange !default
+
+$info: $blue !default
+$success: $green !default
+$warning: $yellow !default
+$danger: $red !default
+
+$light: $white-ter !default
+$dark: $grey-darker !default
+
+$transparent-black: hsla(0, 0%, 4%, 0.85);
+$transparent-cover: hsla(0, 0%, 4%, 0.50);
+
+$opaque: hsla(0, 0%, 0%, 0);
+
+$music: $purple;
+$sport: $navy-dark;
+$theater: $pink;
+$search: $yellow;
+
+$white-grey-gradient: linear-gradient($white, $white-ter);
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// 3. Applied variables
+
+// Invert colors
+$primary-invert: findColorInvert($primary) !default
+
+$info-invert: findColorInvert($info) !default
+$success-invert: findColorInvert($success) !default
+$warning-invert: findColorInvert($warning) !default
+$danger-invert: findColorInvert($danger) !default
+
+$light-invert: $dark !default
+$dark-invert: $light !default
+
+// General colors
+$body-background: $white-ter !default
+
+$background: $white-ter !default
+
+$border: $grey-lighter !default
+$border-hover: $grey-light !default
+
+$footer-background: $white-grey-gradient;
+
+$box-shadow: 5px 5px 80px $black-bis;
+$box-shadow-light: 0 0 12px $grey-lighter;
+$box-shadow-dark: 0 0 12px $black-bis;
+
+// Text colors
+$text: $grey-dark !default
+$text-invert: findColorInvert($text) !default
+$text-light: $grey !default
+$text-strong: $grey-darker !default
+
+// Code colors
+$code: $red !default
+$code-background: $background !default
+
+$pre: $text !default
+$pre-background: $background !default
+
+// Link colors
+$link: $primary !default
+$link-invert: $primary-invert !default
+$link-visited: $purple !default
+
+$link-hover: $grey-light !default
+$link-hover-background: $white-ter !default
+$link-hover-border: $grey !default
+
+$link-hover-darken: 10%;
+
+$link-active: $grey-darker !default
+$link-active-border: $grey-darker !default
+
+// Typography
+$family-primary: $family-sans-serif !default
+$family-code: $family-monospace !default
+
+$size-small: $size-7 !default
+$size-normal: $size-6 !default
+$size-medium: $size-5 !default
+$size-large: $size-3 !default
+$size-huge: $size-1 !default
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// 4. Lists and maps
+
+$colors: (background: ($black, $white, $grey), white: ($white, $black, $grey), black: ($black, $white, $grey), light: ($light, $light-invert, $grey), dark: ($dark, $dark-invert, $grey), primary: ($primary, $primary-invert, $grey-dark), info: ($info, $info-invert, $grey), success: ($success, $success-invert, $grey), warning: ($warning, $warning-invert, $grey), danger: ($danger, $danger-invert, $grey)) !default
+
+$themeColors: (NFL: ($blue, $white, $grey), NBA: ($red, $white, $grey), NHL: ($orange, $white, $grey), BPL: ($purple, $white, $grey)) !default;
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
+
+// Z-Index
+
+$elements: wrapper, body, header, cover;
+
+// Breakpoints
+
+$breakpoints: (
+        'small'     : 320px,
+        'med'       : 640px,
+        'large'     : 920px,
+        'wide'      : 1200px,
+        'mega'      : 1400px,
+);

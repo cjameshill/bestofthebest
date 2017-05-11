@@ -1,0 +1,192 @@
+body {
+  background: $black-ter;
+}
+
+.title, .subtitle {
+  letter-spacing: -0.06em;
+}
+
+.is-heavy {
+  font-weight: 800;
+}
+
+.has-text-shadow {
+  text-shadow: $box-shadow;
+}
+
+.has-spacing {
+  line-height: 1.5em;
+}
+
+.is-serif {
+  font-family: $family-serif;
+  font-weight: 100;
+}
+
+.is-underlined {
+  text-decoration: underline;
+}
+
+.fullScreen {
+  width: 100vw;
+  height: auto;
+
+  @include mappy-bp(med){
+    height: 100vh;
+  }
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.has-padding {
+  padding: 0 3em;
+}
+
+.is-full {
+  height: 100%;
+  width: 100%;
+}
+
+.is-full-height {
+  min-height: 100vh;
+
+}
+
+.center-column, .center-row, .center-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-column {
+  flex-flow: column wrap;
+}
+
+.center-row, .center-start {
+  flex-flow: row wrap;
+}
+
+.center-start {
+  justify-content: flex-start;
+}
+
+
+.hide-on-small {
+  display: none !important;
+
+  @include mappy-bp(med){
+    display: flex !important;
+  }
+}
+
+
+
+//// HERO
+
+.hero-body {
+  width: 100%;
+  padding: 150px 1em;
+}
+
+.hero.has-background {
+  background: none;
+  margin: 0;
+  z-index: 9;
+
+  .title, .subtitle {
+    color: $white;
+  }
+
+  .hero-body, .body {
+    height: 100%;
+    z-index: 10;
+    background: $opaque;
+  }
+
+  .hero-body.in-page {
+    background: $opaque;
+  }
+
+}
+
+
+//// COLORS
+section.section, .side-bar .item, .tile {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background: $color !important;
+
+      .title, .subtitle {
+        color: $color-invert !important;
+      }
+    }
+  }
+
+  @each $name, $pair in $themeColors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background: $color !important;
+
+      .title, .subtitle {
+        color: $color-invert !important;
+      }
+    }
+  }
+}
+
+//// SECTION
+
+.is-patterned {
+  background-image: url("/images/backgrounds/crossword.png");
+}
+
+.has-gradient {
+  //background: $orange;
+  background: linear-gradient(#3e3e3e 0%, #181818 100%);
+}
+
+.has-shadow {
+  box-shadow: $box-shadow;
+}
+
+
+//// BUTTONS
+
+.button.has-svg {
+  background: none;
+  border: none;
+
+  i {
+    color: $white;
+  }
+
+  svg, i {
+    width: 4.5em;
+    height: 4.5em;
+    border: 1px solid $opaque;
+    border-radius: 100%;
+    padding: 0.8em;
+    fill: $white;
+    transform-origin: 50% 50%;
+    transition: all 200ms $ease-bounce;
+  }
+
+  &:hover {
+    svg, i {
+      transform: scale(1.3, 1.3);
+    }
+  }
+}

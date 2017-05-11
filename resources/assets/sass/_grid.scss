@@ -1,0 +1,33 @@
+.flex-auto {
+  display: flex;
+  flex: auto;
+}
+
+.flex-space-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-space-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-stretch-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  align-items: center;
+
+}
+
+.flex-stretch-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: center;
+}

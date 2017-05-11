@@ -1,0 +1,156 @@
+//// ANIMATIONS
+
+@for $i from 0 through 20 {
+  .is-nth-#{$i} {
+    animation-delay: 200ms * $i;
+  }
+}
+
+
+.animated.animatedSlide {
+  transform: translateY(-800px);
+}
+
+.animated.animatedSlide {
+  animation-duration: 200ms;
+}
+
+.animated.animatedDelay {
+  animation-delay: 700ms;
+}
+
+.bounceInDown{
+  animation-duration: .5s;
+}
+
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale(3, 3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.zoom {
+  animation-name: zoom;
+}
+
+@keyframes swipe-in {
+  from {
+    transform: translate3d(1000px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes swipe-out {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-1000px, 0, 0);
+  }
+}
+
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0.6, 0.6);
+  }
+}
+/// VUE ANIMATIONS
+
+.bounce-up-enter-active {
+  animation: bounceInUp .3s;
+}
+.bounce-up-leave-active {
+  animation: bounceOutDown .3s;
+}
+
+
+.fade-enter-active {
+  animation: fadeIn 600ms;
+}
+
+.fade-leave-active {
+  animation: fadeOut 600ms;
+}
+
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-enter-active {
+  animation: slideInUp 700ms $ease-out;
+}
+.slide-leave-active {
+  animation: slideOutUp 700ms $ease-out;
+}
+
+.slide-down-enter-active {
+  animation: slideInUp 700ms $ease-out;
+}
+.slide-down-leave-active {
+  animation: slideOutUp 700ms $ease-out;
+}
+
+.slide-up-enter-active {
+  animation: slideInDown 700ms $ease-out;
+}
+.slide-up-leave-active {
+  animation: slideOutDown 700ms $ease-out;
+}
+
+
+
+.swipe-enter-active {
+  animation: swipe-in 900ms cubic-bezier(.31,.31,0,1);
+}
+
+.swipe-leave-active {
+  animation: swipe-out 400ms $ease-out;
+}
+
+.zoom-enter-active {
+  animation: zoom 700ms $ease-in;
+}
+.zoom-leave-active {
+  animation: zoomOut;
+}
+
+
+.bounce-enter-active {
+  animation: bounceInDown .3s;
+}
+.bounce-leave-active {
+  animation: bounceOutUp .3s;
+}
+
+.shuffle-move {
+  transition: transform 600ms;
+}
+
+.complete-list-enter-active, .complete-list-leave-active {
+  transition: all 400ms $ease-cubic;
+}
+
+.complete-list-enter, .complete-list-leave-to {
+  transform: translateY(-1000px);
+  opacity: 0;
+}
+
+
